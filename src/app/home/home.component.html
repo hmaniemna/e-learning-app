@@ -1,3 +1,4 @@
+
 <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'" >
     <mdb-carousel-item>
       <div class="view w-100">
@@ -15,7 +16,7 @@
       </div>
       <div class="carousel-caption">
         <h2 class="h3-responsive" >if you are an admin </h2>
-        <button type="button" mdbBtn color="light" mdbWavesEffect >click here</button>
+        <button type="button" mdbBtn color="light" mdbWavesEffect (click)="openLoginForm()" >Admin</button>
       
       </div>
     </mdb-carousel-item>
@@ -26,7 +27,7 @@
       </div>
       <div class="carousel-caption">
         <h2 class="h3-responsive">if you are our student</h2>
-        <button type="button" mdbBtn color="light" mdbWavesEffect >click here</button>
+        <button type="button" mdbBtn color="light" mdbWavesEffect (click)="openLoginForm()">Student</button>
       </div>
     </mdb-carousel-item>
     <mdb-carousel-item>
@@ -36,7 +37,7 @@
       </div>
       <div class="carousel-caption"  >
         <h2 class="h3-responsive" class="buttons">if you are one of our teachers</h2> 
-        <div class="buttons"><button type="button" mdbBtn color="light" mdbWavesEffect  >click here</button></div>
+        <div class="buttons"><button type="button" mdbBtn color="light" mdbWavesEffect (click)="openLoginForm()"  >Teacher</button></div>
       </div>
     </mdb-carousel-item>
  

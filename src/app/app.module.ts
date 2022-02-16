@@ -17,19 +17,24 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ToastrModule } from 'ngx-toastr';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -49,13 +54,17 @@ import { HomeComponent } from './home/home.component';
     MatOptionModule,
     MatCarouselModule,
     MDBBootstrapModule,
-    ToastrModule
+    ToastrModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA
   ],
+  entryComponents: [
+    HomeComponent
+    ],
 
 })
 export class AppModule { }
