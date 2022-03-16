@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog,MatDialogRef} from '@angular/material/dialog';
-import { LoginComponent } from '../login/login.component';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,13 +9,25 @@ import { LoginComponent } from '../login/login.component';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public dialog:MatDialog) { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
- openLoginForm(){
-    this.dialog.open(LoginComponent, {width:'500px',height:'450px'});
+  LogToAdmin($myParam: string = ''): void {
+    const navigationDetails: string[] = ['/login'];
+    if($myParam.length) {
+      navigationDetails.push($myParam);
+    }
+    this.router.navigate(navigationDetails);
+  }
+
+  goToAdminV2($myParam: string = ''): void {
+    const navigationDetails: string[] = ['/admin-space'];
+    if($myParam.length) {
+      navigationDetails.push($myParam);
+    }
+    this.router.navigate(navigationDetails);
   }
 
 }

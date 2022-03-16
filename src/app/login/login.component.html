@@ -1,26 +1,39 @@
-<mat-card>
-    <mat-card-content>
-      <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
-        <h2>Log In</h2>
-        <mat-error *ngIf="!loginValid">
-          The username and password were not recognized
-        </mat-error>
-        <mat-form-field>
-          <input matInput placeholder="Email" [(ngModel)]="username" name="username" required>
-          <mat-error>
-            Please provide a valid email address
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput  type="password" placeholder="Password" [(ngModel)]="password" name="password" required>
-          <mat-error>
-            Please provide a valid password
-          </mat-error>
-        </mat-form-field>
-        <p class="b">
-          <button mat-raised-button color="primary" [disabled]="!loginForm.form.valid" >Login</button>
-        </p>
-         
-      </form>
-    </mat-card-content>
-  </mat-card>
+
+<body>
+
+   <section>
+		<div class="ad-log-main">
+			<div class="ad-log-in">
+				<div class="ad-log-in-logo">
+					<a href="index-2.html"><img src="assets/images/logo.png" alt=""></a>
+				</div>
+				<div class="ad-log-in-con">
+			<div class="log-in-pop-right">
+                    <h4>Login</h4>
+                    <p>Connect to your space!</p>
+                    <form class="s12">
+                        <div>
+                            <div class="input-field s12">
+                                <input type="text" data-ng-model="name" class="validate">
+                                <label class="">User name</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="input-field s12">
+                                <input type="password" class="validate">
+                                <label>Password</label>
+                            </div>
+                        </div>
+
+                        <div class="input-field s4">
+                         <a class="waves-effect waves-light log-in-btn waves-input-wrapper " routerLink="/admin-space">adminspace</a>
+                        </div>
+                    </form>
+                </div>
+				</div>
+			</div>
+		</div>
+   </section>
+
+</body>
+
