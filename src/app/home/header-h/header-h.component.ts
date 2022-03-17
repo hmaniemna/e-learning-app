@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-header-h',
+  templateUrl: './header-h.component.html',
+  styleUrls: ['./header-h.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderHComponent implements OnInit {
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  LogToAdmin($myParam: string = ''): void {
+  
+  LogToAccount($myParam: string = ''): void {
     const navigationDetails: string[] = ['/login'];
     if($myParam.length) {
       navigationDetails.push($myParam);
@@ -22,8 +22,8 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(navigationDetails);
   }
 
-  goToAdminV2($myParam: string = ''): void {
-    const navigationDetails: string[] = ['/admin-space'];
+  GoToSection($myParam: string = ''): void {
+    const navigationDetails: string[] = ['/sections'];
     if($myParam.length) {
       navigationDetails.push($myParam);
     }

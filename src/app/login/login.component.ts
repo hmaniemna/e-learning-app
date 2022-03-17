@@ -15,8 +15,8 @@ export class LoginComponent implements OnInit {
 
  
 
-  goToAdmin($myParam: string = ''): void {
-    const navigationDetails: string[] = ['/admin-space'];
+  goToAccount($myParam: string = ''): void {
+    const navigationDetails: string[] = [''];
     if($myParam.length) {
       navigationDetails.push($myParam);
     }

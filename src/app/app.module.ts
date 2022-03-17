@@ -37,19 +37,21 @@ import { ManageTeacherComponent } from './admin-space/manage-teacher/manage-teac
 import { ManageSubjectComponent } from './admin-space/manage-subject/manage-subject.component';
 import { ManageCalendarComponent } from './admin-space/manage-calendar/manage-calendar.component';
 import { ManageStudentComponent } from './admin-space/manage-student/manage-student.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderHComponent } from './home/header-h/header-h.component';
+import { FooterHComponent } from './home/footer-h/footer-h.component';
 
 
 
 import { FullCalendarModule } from '@fullcalendar/angular'; 
-import dayGridPlugin from '@fullcalendar/daygrid';
-import interactionPlugin from '@fullcalendar/interaction'; 
+/**import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';**/
+import { StudentSpaceComponent } from './student-space/student-space.component';
+import { SectionsComponent } from './sections/sections.component'; 
 
-FullCalendarModule.registerPlugins([ 
+/**FullCalendarModule.registerPlugins([ 
   dayGridPlugin,
   interactionPlugin
-]);
+]);**/
 
 
 @NgModule({
@@ -63,8 +65,10 @@ FullCalendarModule.registerPlugins([
     ManageSubjectComponent,
     ManageCalendarComponent,
     ManageStudentComponent,
-    FooterComponent,
-    HeaderComponent
+    HeaderHComponent,
+    FooterHComponent,
+    StudentSpaceComponent,
+    SectionsComponent
   ],
   imports: [
     BrowserModule,
