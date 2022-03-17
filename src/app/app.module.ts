@@ -43,15 +43,15 @@ import { FooterHComponent } from './home/footer-h/footer-h.component';
 
 
 import { FullCalendarModule } from '@fullcalendar/angular'; 
-/**import dayGridPlugin from '@fullcalendar/daygrid';
-import interactionPlugin from '@fullcalendar/interaction';**/
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';
 import { StudentSpaceComponent } from './student-space/student-space.component';
-import { SectionsComponent } from './sections/sections.component'; 
+import { SectionsComponent } from './home/sections/sections.component'; 
 
-/**FullCalendarModule.registerPlugins([ 
+FullCalendarModule.registerPlugins([ 
   dayGridPlugin,
   interactionPlugin
-]);**/
+]);
 
 
 @NgModule({

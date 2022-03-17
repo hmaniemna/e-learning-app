@@ -4,7 +4,7 @@ import { HomeComponent } from '../home/home.component';
 import { AdminSpaceComponent } from '../admin-space/admin-space.component';
 import { LoginComponent } from '../login/login.component';
 import { ManageCalendarComponent } from '../admin-space/manage-calendar/manage-calendar.component';
-import { SectionsComponent } from '../sections/sections.component';
+import { SectionsComponent } from '../home/sections/sections.component';
 
 export const routes: Routes = [
     
