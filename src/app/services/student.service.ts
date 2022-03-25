@@ -38,7 +38,7 @@ private baseUrl= "http://localhost:8080/api/v1/students"
   }
 
   //we'll call the specific student to update by id
-  getStudentById(id:number):Observable<Student>{
-    return this.httpClient.get<Student>(`${this.baseUrl}/${id}`);
+  getStudentById(idS:number):Observable<Student>{
+    return this.httpClient.get<Student>(`${this.baseUrl}/${idS}`);
   }
 }

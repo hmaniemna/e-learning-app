@@ -11,6 +11,8 @@ import { ManageStudentComponent } from '../admin-space/manage-student/manage-stu
 import { ManageTeacherComponent } from '../admin-space/manage-teacher/manage-teacher.component';
 import { CreateStudentComponent } from '../admin-space/manage-student/create-student/create-student.component';
 import { AddNewTeacherComponent } from '../admin-space/manage-teacher/add-new-teacher/add-new-teacher.component';
+import {UpdateStudentComponent} from '../admin-space/manage-student/update-student/update-student.component';
+import {StudentDetailsComponent} from '../admin-space/manage-student/student-details/student-details.component';
 
 export const routes: Routes = [
     
@@ -29,5 +31,7 @@ export const routes: Routes = [
     { path: 'login-student',  component: LoginStudentComponent },
     {path: 'manage-student',  component: ManageStudentComponent },
     {path: 'create-student',  component: CreateStudentComponent },
+    {path: 'update-student/:id',  component: UpdateStudentComponent },
+    {path: 'student-details/:id',  component: StudentDetailsComponent },
 
 ];

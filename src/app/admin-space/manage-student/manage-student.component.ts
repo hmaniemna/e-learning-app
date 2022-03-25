@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Student } from 'src/app/classes/student';
 import { StudentService } from 'src/app/services/student.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-manage-student',
@@ -12,7 +13,8 @@ export class ManageStudentComponent implements OnInit {
   students!:Student[];
 
   constructor(private router:Router,
-    private studentService: StudentService) { 
+    private studentService: StudentService,
+    route: ActivatedRoute) { 
     this.getStudents();
   }
 
@@ -26,14 +28,14 @@ export class ManageStudentComponent implements OnInit {
     })
   }
 
-    // 1 employee details
-    studentDetails(id:number){
-      this.router.navigate(["student-details",id]);
+    // 1 student details
+    studentDetails(idS:number){
+      this.router.navigate(["student-details",idS]);
     }
   
     //this fct: if clicked btn update takes you to the form with the values
-    updateStudent(id: number){
-     this.router.navigate(["update-student",id]);
+    updateStudent(idS: number){
+     this.router.navigate(["update-student",idS]);
     }
   
     deleteStudent(id: number){

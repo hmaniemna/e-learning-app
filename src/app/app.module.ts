@@ -56,6 +56,7 @@ import { AddNewTeacherComponent } from './admin-space/manage-teacher/add-new-tea
 import { UpdateStudentComponent } from './admin-space/manage-student/update-student/update-student.component';
 import { StudentDetailsComponent } from './admin-space/manage-student/student-details/student-details.component';
 import { CreateStudentComponent } from './admin-space/manage-student/create-student/create-student.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 FullCalendarModule.registerPlugins([ 
   dayGridPlugin,
@@ -94,7 +95,8 @@ FullCalendarModule.registerPlugins([
     FlexLayoutModule,
     FormsModule,
     FullCalendarModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
 
     //OLD CODE MABY WILL BE NEEDED
 
