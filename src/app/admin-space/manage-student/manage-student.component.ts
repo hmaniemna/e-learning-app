@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Student } from 'src/app/classes/student';
+import { Student,Level } from 'src/app/classes/student';
 import { StudentService } from 'src/app/services/student.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -11,6 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ManageStudentComponent implements OnInit {
   students!:Student[];
+  
+  level=Level;
 
   constructor(private router:Router,
     private studentService: StudentService,

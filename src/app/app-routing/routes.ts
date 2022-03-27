@@ -13,6 +13,10 @@ import { CreateStudentComponent } from '../admin-space/manage-student/create-stu
 import { AddNewTeacherComponent } from '../admin-space/manage-teacher/add-new-teacher/add-new-teacher.component';
 import {UpdateStudentComponent} from '../admin-space/manage-student/update-student/update-student.component';
 import {StudentDetailsComponent} from '../admin-space/manage-student/student-details/student-details.component';
+import { ManageGroupComponent } from '../admin-space/manage-group/manage-group.component';
+import { CreateGroupComponent } from '../admin-space/manage-group/create-group/create-group.component';
+import { UpdateGroupComponent } from '../admin-space/manage-group/update-group/update-group.component';
+import { DetailsGroupComponent } from '../admin-space/manage-group/details-group/details-group.component';
 
 export const routes: Routes = [
     
@@ -33,5 +37,10 @@ export const routes: Routes = [
     {path: 'create-student',  component: CreateStudentComponent },
     {path: 'update-student/:id',  component: UpdateStudentComponent },
     {path: 'student-details/:id',  component: StudentDetailsComponent },
+
+    {path: 'manage-group', component: ManageGroupComponent},
+    {path: 'create-group',  component: CreateGroupComponent },
+    {path: 'update-group/:id',  component: UpdateGroupComponent },
+    {path: 'details-group/:id',  component: DetailsGroupComponent },
 
 ];

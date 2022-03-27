@@ -57,6 +57,10 @@ import { UpdateStudentComponent } from './admin-space/manage-student/update-stud
 import { StudentDetailsComponent } from './admin-space/manage-student/student-details/student-details.component';
 import { CreateStudentComponent } from './admin-space/manage-student/create-student/create-student.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { ManageGroupComponent } from './admin-space/manage-group/manage-group.component';
+import { CreateGroupComponent } from './admin-space/manage-group/create-group/create-group.component';
+import { UpdateGroupComponent } from './admin-space/manage-group/update-group/update-group.component';
+import { DetailsGroupComponent } from './admin-space/manage-group/details-group/details-group.component';
 
 FullCalendarModule.registerPlugins([ 
   dayGridPlugin,
@@ -86,6 +90,10 @@ FullCalendarModule.registerPlugins([
     UpdateStudentComponent,
     StudentDetailsComponent,
     CreateStudentComponent,
+    ManageGroupComponent,
+    CreateGroupComponent,
+    UpdateGroupComponent,
+    DetailsGroupComponent,
   
   ],
   imports: [

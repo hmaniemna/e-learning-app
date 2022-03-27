@@ -15,8 +15,8 @@ export class CreateStudentComponent implements OnInit {
 
   //for the validation
   create= new FormGroup({
-    email: new FormControl('',Validators.required),
-    password: new FormControl('',Validators.required),
+    email: new FormControl('',[Validators.required,Validators.email]),
+    password: new FormControl('',[Validators.required,Validators.minLength(3)]),
     levell: new FormControl(0,Validators.required),
     access: new FormControl(0,Validators.required),
     firstname: new FormControl('',Validators.required),
