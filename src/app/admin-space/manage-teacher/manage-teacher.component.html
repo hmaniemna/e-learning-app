@@ -18,101 +18,66 @@
     <div class="container-fluid sb2 ">
         <div >
             <div class="sb2-1 ">
-             <app-side-bar></app-side-bar>
-            </div>
+                  <app-side-bar></app-side-bar> 
+             </div>   
             <!--== BODY INNER CONTAINER ==-->
             <div class="sb2-2">
                 <!--== breadcrumbs ==-->
                 <div class="sb2-2-2">
                     <ul>
-                        <li><a href="index-2.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        <li><a href=""><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                         </li>
                         <li class="active-bre"><a href="#"> Teacher List</a>
                         </li>
-                        <li class="page-back"><a href="./"><i class="fa fa-backward" aria-hidden="true"></i> Logout</a>
+                        <li class="page-back"><a  routerLink="/home" routerLinkActive="active"><i class="fa fa-backward" aria-hidden="true"></i> Logout</a>
                         </li>
                     </ul>
                 </div>
-                <!--== Students Details ==-->
+
+
+                <div>
+                    <a routerLink="/create-teacher" routerLinkActive="active" class=" btn btn-secondary" >Add Teacher</a>
+                </div>
+
+            
+                <!--== Teachers Details ==-->
                 <div class="sb2-2-3">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="box-inn-sp">
                                 <div class="inn-title">
                                     <h4>Teacher Details</h4>
-                                    <p>All about teachers like name, teacher id,  email,groups, subject</p>
+                                    <p>All about teachers like name, teacher id,  email,group</p>
                                 </div>
-                                <div class="tab-inn">
-                                    <div class="table-responsive table-desi">
-                                        <table class="table table-hover">
-                                            <thead>
-                                                <tr>
-                                                    <th>idT</th>
-                                                    <th>Name</th>
-                                                    <th>Surname</th>
-                                                    <th>Email</th>
-                                                    <th>Password</th>
-													<th>Groups</th>
-                                                    <th>Calendar </th>
-													<th>View</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>6522</td>
-                                                    <td><a href="#"><span class="list-enq-name">Marsha</span></a>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Mash</span></a>
-                                                    </td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>ST17241</td>
-                                                    <td>C1/D1</td>
-                                                    <td><a href="">link </a></td>
-													<td><a href="admin-student-details.html" class="ad-st-view">View</a></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>6522</td>
-                                                    <td><a href="#"><span class="list-enq-name">Marsha</span></a>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Mash</span></a>
-                                                    </td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>ST17241</td>
-                                                    <td>C1/D1</td>
-                                                    <td><a href="">link </a></td>
-													<td><a href="admin-student-details.html" class="ad-st-view">View</a></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>6522</td>
-                                                    <td><a href="#"><span class="list-enq-name">Marsha</span></a>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Mash</span></a>
-                                                    </td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>ST17241</td>
-                                                    <td>C1/D1</td>
-                                                    <td><a href="">link </a></td>
-													<td><a href="admin-student-details.html" class="ad-st-view">View</a></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>6522</td>
-                                                    <td><a href="#"><span class="list-enq-name">Marsha</span></a>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Mash</span></a>
-                                                    </td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>ST17241</td>
-                                                    <td>C1/D1</td>
-                                                    <td><a href="">link </a></td>
-													<td><a href="admin-student-details.html" class="ad-st-view">View</a></td>
-                                                </tr>
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                <div>
+                                    <table class = "table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th> First Name</th>
+                                                <th> Last Name </th>
+                                                <th> Email Id</th>
+                                                <th>Groupes</th>
+                                                <th>password</th>
+                                                <th>accessCode</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor = "let teacher of teachers" >
+                                                <td> {{ teacher.firstNamet }} </td>
+                                                <td> {{ teacher.lastNamet }} </td>
+                                                <td> {{ teacher.emailIdt }} </td>
+                                                <td> {{ teacher.groups}} </td>
+                                                <td> {{ teacher.passwordt }} </td>
+                                                <td> {{ teacher.Codet }} </td>
+                                                <td>
+                                                    <button (click)= "updateTeacher(teacher.idT)" class="btn btn-info">update</button>
+                                                    <button (click) = "deleteTeacher(teacher.idT)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                                                    <button (click) = "teacherDetails(teacher.idT)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>

@@ -52,7 +52,6 @@ import { HeaderHComponent } from './home/header-h/header-h.component';
 import { SectionsComponent } from './home/sections/sections.component';
 import { SideBarComponent } from './admin-space/side-bar/side-bar.component';
 import { CalendarComponent } from './admin-space/manage-calendar/calendar/calendar.component';
-import { AddNewTeacherComponent } from './admin-space/manage-teacher/add-new-teacher/add-new-teacher.component';
 import { UpdateStudentComponent } from './admin-space/manage-student/update-student/update-student.component';
 import { StudentDetailsComponent } from './admin-space/manage-student/student-details/student-details.component';
 import { CreateStudentComponent } from './admin-space/manage-student/create-student/create-student.component';
@@ -61,6 +60,10 @@ import { ManageGroupComponent } from './admin-space/manage-group/manage-group.co
 import { CreateGroupComponent } from './admin-space/manage-group/create-group/create-group.component';
 import { UpdateGroupComponent } from './admin-space/manage-group/update-group/update-group.component';
 import { DetailsGroupComponent } from './admin-space/manage-group/details-group/details-group.component';
+import { UpdateTeacherComponent } from './admin-space/manage-teacher/update-teacher/update-teacher.component';
+import { CreateTeacherComponent } from './admin-space/manage-teacher/create-teacher/create-teacher.component';
+import { TeacherDetailsComponent } from './admin-space/manage-teacher/teacher-details/teacher-details.component';
+import { LoginTeacherComponent } from './login-all/login-teacher/login-teacher.component';
 
 FullCalendarModule.registerPlugins([ 
   dayGridPlugin,
@@ -86,7 +89,6 @@ FullCalendarModule.registerPlugins([
     SectionsComponent,
     SideBarComponent,
     CalendarComponent,
-    AddNewTeacherComponent,
     UpdateStudentComponent,
     StudentDetailsComponent,
     CreateStudentComponent,
@@ -94,6 +96,10 @@ FullCalendarModule.registerPlugins([
     CreateGroupComponent,
     UpdateGroupComponent,
     DetailsGroupComponent,
+    UpdateTeacherComponent,
+    CreateTeacherComponent,
+    TeacherDetailsComponent,
+    LoginTeacherComponent,
   
   ],
   imports: [
