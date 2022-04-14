@@ -28,7 +28,6 @@ import {MatSidenavModule} from '@angular/material/sidenav';*/
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { AdminSpaceComponent } from './admin-space/admin-space.component';
@@ -37,16 +36,44 @@ import { ManageTeacherComponent } from './admin-space/manage-teacher/manage-teac
 import { ManageSubjectComponent } from './admin-space/manage-subject/manage-subject.component';
 import { ManageCalendarComponent } from './admin-space/manage-calendar/manage-calendar.component';
 import { ManageStudentComponent } from './admin-space/manage-student/manage-student.component';
-import { HeaderHComponent } from './home/header-h/header-h.component';
-import { FooterHComponent } from './home/footer-h/footer-h.component';
+
 
 
 
 import { FullCalendarModule } from '@fullcalendar/angular'; 
 import dayGridPlugin from '@fullcalendar/daygrid';
-import interactionPlugin from '@fullcalendar/interaction';
+import interactionPlugin from '@fullcalendar/interaction'; 
+import { HttpClientModule } from '@angular/common/http';
 import { StudentSpaceComponent } from './student-space/student-space.component';
-import { SectionsComponent } from './home/sections/sections.component'; 
+import { LoginAdminComponent } from './login-all/login-admin/login-admin.component';
+import { LoginStudentComponent } from './login-all/login-student/login-student.component';
+import { FooterHComponent } from './home/footer-h/footer-h.component';
+import { HeaderHComponent } from './home/header-h/header-h.component';
+import { SectionsComponent } from './home/sections/sections.component';
+import { SideBarComponent } from './admin-space/side-bar/side-bar.component';
+import { CalendarComponent } from './admin-space/manage-calendar/calendar/calendar.component';
+import { UpdateStudentComponent } from './admin-space/manage-student/update-student/update-student.component';
+import { StudentDetailsComponent } from './admin-space/manage-student/student-details/student-details.component';
+import { CreateStudentComponent } from './admin-space/manage-student/create-student/create-student.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { ManageGroupComponent } from './admin-space/manage-group/manage-group.component';
+import { CreateGroupComponent } from './admin-space/manage-group/create-group/create-group.component';
+import { UpdateGroupComponent } from './admin-space/manage-group/update-group/update-group.component';
+import { DetailsGroupComponent } from './admin-space/manage-group/details-group/details-group.component';
+import { UpdateTeacherComponent } from './admin-space/manage-teacher/update-teacher/update-teacher.component';
+import { CreateTeacherComponent } from './admin-space/manage-teacher/create-teacher/create-teacher.component';
+import { TeacherDetailsComponent } from './admin-space/manage-teacher/teacher-details/teacher-details.component';
+import { LoginTeacherComponent } from './login-all/login-teacher/login-teacher.component';
+import { SideBarSComponent } from './student-space/side-bar-s/side-bar-s.component';
+import { CalendarSComponent } from './student-space/calendar-s/calendar-s.component';
+import { ProfileSComponent } from './student-space/profile-s/profile-s.component';
+import { ClassroomSComponent } from './student-space/classroom-s/classroom-s.component';
+import { DashboardSComponent } from './student-space/dashboard-s/dashboard-s.component';
+import { TimeLineSComponent } from './student-space/time-line-s/time-line-s.component';
+import { EventsSComponent } from './student-space/events-s/events-s.component';
+import { ArticlesSComponent } from './student-space/articles-s/articles-s.component';
+import { TestsSComponent } from './student-space/tests-s/tests-s.component'
+
 
 FullCalendarModule.registerPlugins([ 
   dayGridPlugin,
@@ -57,7 +84,6 @@ FullCalendarModule.registerPlugins([
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     HomeComponent,
     AdminSpaceComponent,
     ManageClassroomComponent,
@@ -65,10 +91,35 @@ FullCalendarModule.registerPlugins([
     ManageSubjectComponent,
     ManageCalendarComponent,
     ManageStudentComponent,
-    HeaderHComponent,
-    FooterHComponent,
     StudentSpaceComponent,
-    SectionsComponent
+    LoginAdminComponent,
+    LoginStudentComponent,
+    FooterHComponent,
+    HeaderHComponent,
+    SectionsComponent,
+    SideBarComponent,
+    CalendarComponent,
+    UpdateStudentComponent,
+    StudentDetailsComponent,
+    CreateStudentComponent,
+    ManageGroupComponent,
+    CreateGroupComponent,
+    UpdateGroupComponent,
+    DetailsGroupComponent,
+    UpdateTeacherComponent,
+    CreateTeacherComponent,
+    TeacherDetailsComponent,
+    LoginTeacherComponent,
+    SideBarSComponent,
+    CalendarSComponent,
+    ProfileSComponent,
+    ClassroomSComponent,
+    DashboardSComponent,
+    TimeLineSComponent,
+    EventsSComponent,
+    ArticlesSComponent,
+    TestsSComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -76,7 +127,9 @@ FullCalendarModule.registerPlugins([
     BrowserAnimationsModule,
     FlexLayoutModule,
     FormsModule,
-    FullCalendarModule
+    FullCalendarModule,
+    HttpClientModule,
+    ReactiveFormsModule
 
     //OLD CODE MABY WILL BE NEEDED
 

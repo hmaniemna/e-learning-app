@@ -61,7 +61,6 @@
     <!--HEADER SECTION-->
     <section>
         
-
         <!-- LOGO AND MENU SECTION -->
         <div class="top-logo" data-spy="affix" data-offset-top="250">
             <div class="container">
@@ -91,32 +90,26 @@
                                                 </div>
                                                 <div class="mm1-com mm1-s2">
                                                     <p>Want to change the world? At ENSI we’re doing just that. When you join the ENSI's virtual environment, learning onlinr has never been this simple.</p>
-                                                    <a href="about.html" class="mm-r-m-btn">Read more</a>
+                                                    <a href="" class="mm-r-m-btn">Read more</a>
                                                 </div>
-                                              <!--<div class="mm1-com mm1-s3">
-                                                    <ul>
-                                                        <li><a href="about.html">About</a></li>
-                                                  
-                                                    </ul>
-                                                </div>
-                                               <div class="mm1-com mm1-s4">
-                                                    <ul>
-                                                        <li><a href="dashboard.html">Student profile</a></li>
-                                                        <li><a href="db-courses.html">Dashboard courses</a></li>
-                                                        <li><a href="db-exams.html">Dashboard exams</a></li>
-                                                        <li><a href="db-profile.html">Dashboard profile</a></li>
-                                                        <li><a href="db-time-line.html">Dashboard timeline</a></li>
-                                                    </ul>
-                                                </div> -->
                                             </div>
                                         </div>
                                     </div>
                                 </li>
 
-                                <li><a href="all-courses.html" routerLink="/sections">All sections</a></li>
-                                <!--<li><a class='dropdown-button ed-sub-menu' href='#' data-activates='dropdown1'>Courses</a></li>-->
-                                <li class="cour-menu">
-                                    <a href="#!" class="mm-arr" routerLink="/login">Login</a>
+                                <li><a href="" routerLink="/sections" routerLinkActive="active">All sections</a></li>
+                               <li>
+                                <div class="dropdown show">
+                                    <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Login
+                                    </a>
+                                  
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                      <a class="dropdown-item" href="#" routerLink="/login-student" routerLinkActive="active">Login as Student</a>
+                                      <a class="dropdown-item" href="#">Login as Teacher</a>
+                                      <a class="dropdown-item" href="#" routerLink="/login-admin" routerLinkActive="active">Login as Admin</a>
+                                    </div>
+                                  </div>
                                 </li>
                             </ul>
                         </div>
@@ -140,17 +133,17 @@
                                     </div>
                                     <div class="sf-list">
                                         <ul>
-                                            <li><a href="course-details.html">GL</a></li>
-                                            <li><a href="course-details.html">IoT</a></li>
-                                            <li><a href="course-details.html">Data Science</a></li>
-                                            <li><a href="course-details.html">Finance</a></li>
-                                            <li><a href="course-details.html">AI</a></li>
-                                            <li><a href="course-details.html">SLE</a></li>
+                                            <li><a href="">GL</a></li>
+                                            <li><a href="">IoT</a></li>
+                                            <li><a href="">Data Science</a></li>
+                                            <li><a href="">Finance</a></li>
+                                            <li><a href="">AI</a></li>
+                                            <li><a href="">SLE</a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="sf-submit reposition_btn">
-                                    <input type="submit" value="Search Section">
+                                    <input type="submit" value="Search Section"routerLink="/sections" routerLinkActive="active">
                                 </div>
                             </form>
                         </div>
@@ -185,4 +178,3 @@
   
 </section>
 </body>
-

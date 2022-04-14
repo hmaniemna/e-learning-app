@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CalendarOptions } from '@fullcalendar/angular';
+import { Router } from '@angular/router';
 
 @Component({
 selector: 'app-manage-calendar',
@@ -8,15 +8,18 @@ selector: 'app-manage-calendar',
 })
 export class ManageCalendarComponent implements OnInit {
 
- constructor() { }
+ constructor(private router: Router) { }
 
  ngOnInit(): void {
  }
 
+ AccessCalendar($myParam: string = ''): void {
+    const navigationDetails: string[] = ['/calendar'];
+    if($myParam.length) {
+      navigationDetails.push($myParam);
+    }
+    this.router.navigate(navigationDetails);
+  }
 
- calendarOptions: CalendarOptions = {
-  initialView: 'dayGridMonth'
-};
-
+    
 }
-
